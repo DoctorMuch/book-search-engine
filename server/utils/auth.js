@@ -8,7 +8,7 @@ module.exports = {
   // function for our authenticated routes
   // updating for graphq with destructured { req }
   authMiddleware: function ({ req }) {
-    // allows token to be sent via  req.query or headers
+    // allows token to be sent via req.body or req.query or headers
     let token = req.body.token || req.query.token || req.headers.authorization;
 
     // ["Bearer", "<tokenvalue>"]
